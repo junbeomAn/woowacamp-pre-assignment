@@ -32,6 +32,7 @@ class TicTacToe {
         for (let k = 0; k < 3; k++) {
           board.children[i].children[k].style.backgroundColor = "#12bdac7e";
         }
+        this.scoreUpdate(1);
         alert("O가 이겼습니다.")
         return true;
       } else if (row === "000") {
@@ -39,6 +40,7 @@ class TicTacToe {
         for (let k = 0; k < 3; k++) {
           board.children[i].children[k].style.backgroundColor = "#12bdac7e";
         }
+        this.scoreUpdate(0);
         alert("X가 이겼습니다.")
         return true
       } else if (col === "111") {
@@ -46,6 +48,7 @@ class TicTacToe {
         for (let k = 0; k < 3; k++) {
           board.children[k].children[i].style.backgroundColor = "#12bdac7e";
         }
+        this.scoreUpdate(1);
         alert("O가 이겼습니다.")
         return true;
       } else if (col === "000") {
@@ -53,6 +56,7 @@ class TicTacToe {
         for (let k = 0; k < 3; k++) {
           board.children[k].children[i].style.backgroundColor = "#12bdac7e";
         }
+        this.scoreUpdate(0);
         alert("X가 이겼습니다.")
         return true;
       }
@@ -63,8 +67,10 @@ class TicTacToe {
       board.children[1].children[1].style.backgroundColor = "#12bdac7e";
       board.children[2].children[2].style.backgroundColor = "#12bdac7e";
       if (boardStatus[0] === 0) {
+        this.scoreUpdate(0);
         alert("X가 이겼습니다.");
       } else {
+        this.scoreUpdate(1);
         alert("O가 이겼습니다.");
       }
       return true;
@@ -73,8 +79,10 @@ class TicTacToe {
       board.children[1].children[1].style.backgroundColor = "#12bdac96";
       board.children[2].children[0].style.backgroundColor = "#12bdac96";
       if (boardStatus[2] === 0) {
+        this.scoreUpdate(0);
         alert("X가 이겼습니다.");
       } else {
+        this.scoreUpdate(1);
         alert("O가 이겼습니다.");
       }
       return true;
@@ -99,6 +107,8 @@ class TicTacToe {
     this.setState({
       score: newScore
     })
+    this.$target.querySelector("#score-board").children[0].innerText = newScore[0];
+    this.$target.querySelector("#score-board").children[2].innerText = newScore[1];
   }
 
   getAvailablePos() {
@@ -141,19 +151,19 @@ class TicTacToe {
     }
   }
 
-  // 스코어 업데이트 및 플레이어 선택 리셋.
-
   onReStart() {
     this.init();
     this.setState({
       boardStatus: new Array(9),
-      selected: null
+      selected: null,
+      finished: false,
     })
   }
-
+  // 끝났는데, 계속 클릭할경우 말 표시가 가능한 부분 수정하면 끝.
   onAreaClick(e) {
     const { target } = e;
-    const { boardStatus } = this.$state;
+    const { boardStatus, finished } = this.$state;
+    if (finished) return ;
     if (target.closest(".block")) {
       const row = Number(target.dataset.row);
       const col = Number(target.dataset.col);
@@ -167,6 +177,7 @@ class TicTacToe {
       newStatus[row * 3 + col] = this.$state.selected;
       this.setState({ boardStatus: newStatus })
       if (this.checkFinished()) {
+        this.setState({ finished: true })
         return ;
       }
 
@@ -227,7 +238,8 @@ const target = document.getElementById("tic-tac-toe");
 const board = new TicTacToe(target, {
   boardStatus: new Array(9), // new arr 해서 빈것으로 채우고 0, 1로 o, x 판단해야 쉬워짐.
   selected: null, // X: 0, O: 1
-  score: [0, 0]
+  score: [0, 0],
+  finished: false
 });
 
 /*

@@ -40,10 +40,11 @@ article {
   display: flex;
   justify-content: center;
   padding: 10px 0;
+  border-radius: 8px;
   border-bottom: 1px solid var(--main-green);
   box-shadow: 0px 4px 6px -4px rgba(0,0,0,0.62);
   cursor: pointer;
-  border-radius: 10px;
+
 }
 
 #select-ox div.selected {
@@ -62,7 +63,6 @@ article {
   width: var(--board-width);
   height: 300px;
   border-radius: 10px;
-  background-color: var(--main-green);
   box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.62);
   color: rgb(59, 59, 59);
 }
@@ -72,13 +72,29 @@ article {
   height: 100px;
 }
 
+#board .row:first-child .block:first-child {
+  border-top-left-radius: 10px;
+}
+
+#board .row:first-child .block:last-child {
+  border-top-right-radius: 10px;
+}
+
+#board .row:last-child .block:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+#board .row:last-child .block:last-child {
+  border-bottom-right-radius: 10px;
+}
+
 #board .block {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
   text-align: center;
-
+  background-color: var(--main-green);
   border-right: 7px solid var(--border-green);
   flex: 1;
 
