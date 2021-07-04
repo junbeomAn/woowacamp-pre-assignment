@@ -1,166 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a932e1d49e.js" crossorigin="anonymous"></script>
-  <title>네이버 쇼핑</title>
-</head>
-<body>
-  <div class="entire-wrapper">
-    <header>
-      <div class="header__bg">
-        <!-- 맨위 -->
-        <div class="header__top">
-          <div class="header__top--wrapper wrapper">
-            <div class="header__top--left">
-              <div class="header__home-logo">
-                NAVER
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a932e1d49e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>네이버 쇼핑</title>
+  </head>
+  <body>
+    <div class="entire-wrapper">
+      <header>
+        <div class="header__bg">
+          <!-- 맨위 -->
+          <div class="header__top">
+            <div class="header__top--wrapper wrapper">
+              <div class="header__top--left">
+                <div class="header__home-logo">
+                  NAVER
+                </div>
+                <div class="header__naver-pay">
+                  네이버페이
+                </div>
               </div>
-              <div class="header__naver-pay">
-                네이버페이
+              <div class="header__top--right">
+                <div class="header__top--login">
+                  로그인
+                </div>
+                <div class="header__top--other-services">
+                  <i class="fas fa-bars"></i>
+                </div>
               </div>
             </div>
-            <div class="header__top--right">
-              <div class="header__top--login">
-                로그인
+            <span class="header__border-line"></span>
+          </div>
+          <!-- 중간 -->
+          <div class="header__main">
+            <div class="header__main--wrapper wrapper">
+              <div class="header__main--shopping">
+                <h1 class="header__shopping-home">
+                  <img
+                    src="./src/logo.png"
+                    alt="naver"
+                    class="header__naver-logo"
+                  />
+                  쇼핑
+                </h1>
+                <span class="header__devide-line">|</span>
+                <div class="header__shopping-live">
+                  쇼핑 LIVE
+                </div>
               </div>
-              <div class="header__top--other-services">
-                <i class="fas fa-bars"></i>
+              <div class="header__main--search">
+                <form
+                  class="header__search-form full-height"
+                  action
+                  method="get"
+                >
+                  <input type="text" class="header__search-input full-height" />
+                  <button type="submit" class="header__search-btn full-height">
+                    검색
+                  </button>
+                  <button class="header__detail-search full-height">
+                    상세검색
+                    <span><i class="fas fa-sort-down"></i></span>
+                  </button>
+                </form>
+              </div>
+              <div class="header__main--others">
+                <button class="header__more-category">
+                  카테고리 더보기
+                  <span><i class="fas fa-sort-down"></i></span>
+                </button>
+                <div class="header__other-options">
+                  <div class="header__best100">
+                    베스트100
+                  </div>
+                  <span class="header__devide-line">|</span>
+                  <div class="header__entire-mall">
+                    몰 전체보기
+                  </div>
+                  <span class="header__devide-line">|</span>
+                  <div class="header__shopping-mypage">
+                    <span><i class="fas fa-user"></i></span>
+                    쇼핑 MY
+                    <span><i class="fas fa-sort-down"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="header__border-line"></span>
+          </div>
+        </div>
+        <!-- 헤더 옵션 -->
+        <div class="header__menus">
+          <span class="header__menu-move">&lt;</span>
+          <div class="header__menu-wrapper">
+            <ul class="header__menu-list full-height">
+              <li><a href="#">홈</a></li>
+              <li><a href="#">백화점윈도</a></li>
+              <li><a href="#">아울렛윈도</a></li>
+              <li><a href="#">스타일윈도</a></li>
+              <li><a href="#">디자이너윈도</a></li>
+              <li><a href="#">뷰티윈도</a></li>
+              <li><a href="#">럭셔리뷰티</a></li>
+              <li><a href="#">리빙윈도</a></li>
+              <li><a href="#">푸드윈도</a></li>
+              <li><a href="#">장보기</a></li>
+              <li><a href="#">키즈윈도</a></li>
+              <li><a href="#">펫윈도</a></li>
+              <li><a href="#">플레이윈도</a></li>
+              <li><a href="#">아트윈도</a></li>
+              <li><a href="#">|</a></li>
+              <li><a href="#">MR.</a></li>
+              <li><a href="#">핫딜</a></li>
+              <li><a href="#">해외직구</a></li>
+              <li><a href="#">기획전</a></li>
+              <li><a href="#">트렌드상품</a></li>
+              <li><a href="#">AiTEMS</a></li>
+            </ul>
+          </div>
+          <span class="header__menu-move">&gt;</span>
+          <span class="header__border-line"></span>
+        </div>
+      </header>
+
+      <section class="section__container">
+        <article class="section__shopping">
+          <div class="section__shopping-top grid">
+            <div class="grid-cell category-area">
+              <div class="category-menu">
+                <h3>Category</h3>
+                <ul class="category-list">
+                  <li class="category-item">패션의류</li>
+                  <li class="category-item">패션잡화</li>
+                  <li class="category-item">화장품/미용</li>
+                  <li class="category-item">디지털/가전</li>
+                  <li class="category-item">가구/인테리어</li>
+                  <li class="category-item">출산/육아</li>
+                  <li class="category-item">식품</li>
+                  <li class="category-item">스포츠/레저</li>
+                  <li class="category-item">생활/건강</li>
+                  <li class="category-item">여가/생활편의</li>
+                  <li class="category-item">면세점</li>
+                  <li class="category-item">도서</li>
+                </ul>
+              </div>
+              <div class="category-info">
+                <h3 class="category-popular-title category-title">
+                  <em>인기상품</em>
+                </h3>
+                <img
+                  src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jtih08meeh7.jpg"
+                  alt="인기상품"
+                  class="category-popular"
+                />
+                <h3 class="category-tag-title category-title">
+                  <em>추천태그</em>
+                </h3>
+                <div class="category-tag">
+                  <a href="#" class="tag-item">#덴탈마스크</a>
+                  <a href="#" class="tag-item">#아쿠아슈즈</a>
+                  <a href="#" class="tag-item">#서큘레이터</a>
+                  <a href="#" class="tag-item">#바디미스트</a>
+                  <a href="#" class="tag-item">#여름이불</a>
+                  <a href="#" class="tag-item">#모기퇴치팔찌</a>
+                  <a href="#" class="tag-item">#닭가슴살</a>
+                  <a href="#" class="tag-item">#전기자전거</a>
+                </div>
+              </div>
+            </div>
+            <div class="grid-cell home-event-image-container">
+              <img
+                class="home-event-image"
+                src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0701/juc9jk2184k.png"
+                alt="요즘 많이 찾는 백화점 트렌드템 라이브 현대 미아점 라인어디션 라이브 7월 5일 진행 7월 4일부터 7월 6일까지"
+              />
+            </div>
+            <div class="grid-cell custom-cell-01">
+              <div class="title-area">
+                <h3>
+                  <img
+                    src="https://ssl.pstatic.net/static.checkout/cnsv/iu/home/15/0714/djau2c7u6ge.png"
+                    alt="NEWS"
+                  />
+                  <span>쇼핑몰 소식</span>
+                </h3>
+              </div>
+              <div class="list-wrapper-news">
+                <ul>
+                  <li>
+                    <img
+                      src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jsqy08isn44.jpg"
+                      alt="news-1"
+                    />
+                    <span>르꼬끄골프 베스트셀러 듀얼플렉스 할인!</span>
+                    <em>데상트코리아</em>
+                  </li>
+                  <li>
+                    <img
+                      src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jsqy0942tuy.jpg"
+                      alt="news-2"
+                    />
+                    <span>로엠/미쏘 여름 BEST 특가 + 쿠폰까지</span>
+                    <em>패션플러스</em>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-wrapper-megazine">
+                <ul>
+                  <li>
+                    <span class="img-area">
+                      <img
+                        src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jsqy09a5ib1.jpg"
+                        alt=""
+                      />
+                    </span>
+                    <div class="text-area">
+                      <span>LF몰</span>
+                      <span>전 상품 최대 70% 여름세일!!</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="img-area">
+                      <img
+                        src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jsqy09a5ib1.jpg"
+                        alt=""
+                      />
+                    </span>
+                    <div class="text-area">
+                      <span>LF몰</span>
+                      <span>전 상품 최대 70% 여름세일!!</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="img-area">
+                      <img
+                        src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jsqy09a5ib1.jpg"
+                        alt=""
+                      />
+                    </span>
+                    <div class="text-area">
+                      <span>LF몰</span>
+                      <span>전 상품 최대 70% 여름세일!!</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          <span class="header__border-line"></span>
-        </div>
-        <!-- 중간 -->
-        <div class="header__main">
-          <div class="header__main--wrapper wrapper">
-            <div class="header__main--shopping">
-              <h1 class="header__shopping-home">
-                <img src="./src/logo.png" alt="naver" class="header__naver-logo">
-                쇼핑
-              </h1>
-              <span class="header__devide-line">|</span>
-              <div class="header__shopping-live">
-                쇼핑 LIVE
+          <div class="section__shopping-middle grid">
+            <div class="grid-cell">
+              <div class="title-area">
+                <h3>
+                  <img
+                    src="https://ssl.pstatic.net/static.checkout/cnsv/iu/home/15/0714/djau2c7u6ge.png"
+                    alt="NEWS"
+                  />
+                  <span>쇼핑몰 소식</span>
+                </h3>
+              </div>
+              <div class="list-wrapper-news">
+                <ul>
+                  <li>
+                    <img
+                      src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jsqy08isn44.jpg"
+                      alt="news-1"
+                    />
+                    <span>르꼬끄골프 베스트셀러 듀얼플렉스 할인!</span>
+                    <em>데상트코리아</em>
+                  </li>
+                  <li>
+                    <img
+                      src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jsqy0942tuy.jpg"
+                      alt="news-2"
+                    />
+                    <span>로엠/미쏘 여름 BEST 특가 + 쿠폰까지</span>
+                    <em>패션플러스</em>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="header__main--search">
-              <form class="header__search-form full-height" action method="get">
-                <input type="text" class="header__search-input full-height">
-                <button type="submit" class="header__search-btn full-height">
-                  검색
-                </button>
-                <button class="header__detail-search full-height">
-                  상세검색
-                  <span><i class="fas fa-sort-down"></i></span>
-                </button>
-              </form>
-            </div>
-            <div class="header__main--others">
-              <button class="header__more-category">
-                카테고리 더보기
-                <span><i class="fas fa-sort-down"></i></span>
-              </button>
-              <div class="header__other-options">
-                <div class="header__best100">
-                  베스트100
-                </div>
-                <span class="header__devide-line">|</span>
-                <div class="header__entire-mall">
-                  몰 전체보기
-                </div>
-                <span class="header__devide-line">|</span>
-                <div class="header__shopping-mypage">
-                  <span><i class="fas fa-user"></i></span>
-                  쇼핑 MY
-                  <span><i class="fas fa-sort-down"></i></span>
+            <div class="grid-cell brand-shopping-item">
+				<div class="banner-item">
+					<img
+						src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/20/0117/7apv1x2d9tn.jpg"
+						alt="브랜드 장보기에선 최대 12% 적립"
+					/>
+				<!-- <span class="mask"></span> -->
+					<div class="banner-title">
+						<span>
+						<em>브랜드 장보기에선 최대 12% 적립</em>
+						</span>
+					</div>
+				</div>
+				<ul>
+				<li>
+					<img
+					src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jt4w3ig7rl4.jpg"
+					alt="레인보우 샵 다목적 세제"
+					/>
+					<span>레인보우 샵 다목적 세제</span>
+					<em>47% 할인</em>
+				</li>
+				<li>
+					<img
+					src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jt4w3ip5ej5.jpg"
+					alt="집으로 ON 나물밥 10개"
+					/>
+					<span>집으로 ON 나물밥 10개</span>
+					<em>1만 원대</em>
+				</li>
+				<li>
+					<img
+					src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jt4w3ivburw.jpg"
+					alt="비락 3일 발효 요쿠르트"
+					/>
+					<span>비락 3일 발효 요쿠르트</span>
+					<em>120개 무배</em>
+				</li>
+				</ul>
+			</div>
+            <div class="grid-cell custom-cell-02 brand-shopping-item">
+              <div class="banner-item">
+                <img
+                  src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/20/0117/7apv1x2d9tn.jpg"
+                  alt="브랜드 장보기에선 최대 12% 적립"
+                />
+                <!-- <span class="mask"></span> -->
+                <div class="banner-title">
+                  <span>
+                    <em>브랜드 장보기에선 최대 12% 적립</em>
+                  </span>
                 </div>
               </div>
+              <ul>
+                <li>
+                  <img
+                    src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jt4w3ig7rl4.jpg"
+                    alt="레인보우 샵 다목적 세제"
+                  />
+                  <span>레인보우 샵 다목적 세제</span>
+                  <em>47% 할인</em>
+                </li>
+                <li>
+                  <img
+                    src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jt4w3ip5ej5.jpg"
+                    alt="집으로 ON 나물밥 10개"
+                  />
+                  <span>집으로 ON 나물밥 10개</span>
+                  <em>1만 원대</em>
+                </li>
+                <li>
+                  <img
+                    src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jt4w3ivburw.jpg"
+                    alt="비락 3일 발효 요쿠르트"
+                  />
+                  <span>비락 3일 발효 요쿠르트</span>
+                  <em>120개 무배</em>
+                </li>
+              </ul>
             </div>
           </div>
-          <span class="header__border-line"></span>
-        </div>
-      </div>
-      <!-- 헤더 옵션 -->
-      <div class="header__menus">
-        <span class="header__menu-move">&lt;</span>
-        <div class="header__menu-wrapper">
-          <ul class="header__menu-list full-height">
-            <li><a href="#">홈</a></li>
-            <li><a href="#">백화점윈도</a></li>
-            <li><a href="#">아울렛윈도</a></li>
-            <li><a href="#">스타일윈도</a></li>
-            <li><a href="#">디자이너윈도</a></li>
-            <li><a href="#">뷰티윈도</a></li>
-            <li><a href="#">럭셔리뷰티</a></li>
-            <li><a href="#">리빙윈도</a></li>
-            <li><a href="#">푸드윈도</a></li>
-            <li><a href="#">장보기</a></li>
-            <li><a href="#">키즈윈도</a></li>
-            <li><a href="#">펫윈도</a></li>
-            <li><a href="#">플레이윈도</a></li>
-            <li><a href="#">아트윈도</a></li>
-            <li><a href="#">|</a></li>
-            <li><a href="#">MR.</a></li>
-            <li><a href="#">핫딜</a></li>
-            <li><a href="#">해외직구</a></li>
-            <li><a href="#">기획전</a></li>
-            <li><a href="#">트렌드상품</a></li>
-            <li><a href="#">AiTEMS</a></li>
-          </ul>
-        </div>
-        <span class="header__menu-move">&gt;</span>
-        <span class="header__border-line"></span>
-      </div>
-    </header>
-
-    <section class="section__container">
-      <article class="section__shopping">
-        <div class="section__shopping-top grid">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell custom-cell-01"></div>
-        </div>
-        <div class="section__shopping-middle grid">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell custom-cell-02"></div>
-        </div>
-        <div class="section__shopping-bottom grid">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="section__shopping-mallarea">
-          <div class="section__top selection"></div>
-          <div class="section__bottom selection"></div>
-        </div>
-        <div class="section__home-notice">
-          <h3>공지사항</h3>
-          <p>[안내] 네이버 쇼핑 공지사항을 확인하세요.</p>
-          <a href="#">전체보기</a>
-        </div>
-      </article>
-    </section>
-    <footer>
-
-
-    </footer>
-  </div>
-</body>
+          <div class="section__shopping-bottom grid">
+            <div class="grid-cell">
+				<div class="title-area">
+					<h3>
+					<img
+						src="https://ssl.pstatic.net/static.checkout/cnsv/iu/home/15/0714/djau2c7u6ge.png"
+						alt="NEWS"
+					/>
+					<span>제값 주고 사면 아깝잖아!</span>
+					</h3>
+				</div>
+				<div class="list-wrapper-news">
+					<ul>
+						<li>
+						<img
+							src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jsqy08isn44.jpg"
+							alt="news-1"
+						/>
+						<span>르꼬끄골프 베스트셀러 듀얼플렉스 할인!</span>
+						<em>데상트코리아</em>
+						</li>
+						<li>
+						<img
+							src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jsqy0942tuy.jpg"
+							alt="news-2"
+						/>
+						<span>로엠/미쏘 여름 BEST 특가 + 쿠폰까지</span>
+						<em>패션플러스</em>
+						</li>
+					</ul>
+				</div>
+			</div>
+            <div class="grid-cell">
+				<div class="title-area">
+					<h3>
+					<img
+						src="https://ssl.pstatic.net/static.checkout/cnsv/iu/home/15/0714/djau2c7u6ge.png"
+						alt="NEWS"
+					/>
+					<span>브랜드 신상 소식 및 다양한 컨텐츠</span>
+					</h3>
+				</div>
+				<div class="list-wrapper-news">
+					<ul>
+						<li>
+						<img
+							src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jsqy08isn44.jpg"
+							alt="news-1"
+						/>
+						<span>르꼬끄골프 베스트셀러 듀얼플렉스 할인!</span>
+						<em>데상트코리아</em>
+						</li>
+						<li>
+						<img
+							src="https://ssl.pstatic.net/imgshopping/cnsv/iu/home/21/0629/jsqy0942tuy.jpg"
+							alt="news-2"
+						/>
+						<span>로엠/미쏘 여름 BEST 특가 + 쿠폰까지</span>
+						<em>패션플러스</em>
+						</li>
+					</ul>
+				</div>
+			</div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="section__shopping-mallarea">
+            <div class="section__top selection"></div>
+            <div class="section__bottom selection"></div>
+          </div>
+          <div class="section__home-notice">
+            <h3>공지사항</h3>
+            <p>[안내] 네이버 쇼핑 공지사항을 확인하세요.</p>
+            <a href="#">전체보기</a>
+          </div>
+        </article>
+      </section>
+      <footer></footer>
+    </div>
+  </body>
 </html>
